@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import CharacterList, { Character } from "./CharacterList";
-import './App.css';
+import "./App.css";
 
 const App: FC = () => {
   const characters: Character[] = [
