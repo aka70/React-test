@@ -1,5 +1,5 @@
-import React, { FC } from "react";
-import { Header, Icon, Item, ItemContent } from "semantic-ui-react";
+import React, { FC } from 'react';
+import { Header, Icon, Item } from 'semantic-ui-react';
 
 export type Character = {
   id: number;
@@ -20,18 +20,19 @@ const CharacterList: FC<Props> = (props) => {
     <>
       <Header as="h2">{school}</Header>
       <Item.Group>
-        {characters.map((character) => {
+        {characters.map((character) => (
           <Item key={character.id}>
             <Icon name="user circle" size="huge" />
-            <ItemContent>
+            <Item.Content>
               <Item.Header>{character.name}</Item.Header>
               <Item.Meta>{character.grade}年生</Item.Meta>
               <Item.Meta>
-                {character.height ? character.height : "???"}cm
+                {character.height ? character.height : '???'}
+                cm
               </Item.Meta>
-            </ItemContent>
-          </Item>;
-        })}
+            </Item.Content>
+          </Item>
+        ))}
       </Item.Group>
     </>
   );
