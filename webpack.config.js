@@ -12,7 +12,17 @@ module.exports = {
             transpileOnly: true,
           },
         },
-      }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: { url: false }
+          }
+        ]
+      },
     ],
   },
   resolve: {
